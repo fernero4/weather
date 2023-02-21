@@ -14,6 +14,8 @@ root.geometry("890x470+300+300")
 root.configure(bg="#57adff")
 root.resizable(False, False)
 
+IMAG_PATH="C:/Users/ferna/Downloads/python/clima/weather/"
+
 def getWeather():
     city=textField.get()
 
@@ -56,7 +58,7 @@ def getWeather():
 
     #first cell
     firstdayImage=clima['weather'][0]['icon']
-    photo1=ImageTk.PhotoImage(file=f"C:/Users/ferna/Downloads/python/clima/icon/{firstdayImage}@2x.png")
+    photo1=ImageTk.PhotoImage(file=IMAG_PATH+f"icon/{firstdayImage}@2x.png")
     firstImage.config(image=photo1)
     firstImage.image=photo1
 
@@ -70,11 +72,11 @@ def getWeather():
 
 
 #icon
-image_icon=PhotoImage(file="C:/Users/ferna/Downloads/python/clima/Images/logo.png")
+image_icon=PhotoImage(file=IMAG_PATH+"Images/logo.png")
 root.iconphoto(False, image_icon)
 
 
-Round_box=PhotoImage(file="C:/Users/ferna/Downloads/python/clima/Images/Rounded Rectangle 4.png")
+Round_box=PhotoImage(file=IMAG_PATH+"Images/Rounded Rectangle 4.png")
 Label(root, image=Round_box, bg="#57adff").place(x=30, y=110)
 
 #label
@@ -95,11 +97,11 @@ label5.place(x=50, y=225)
 
 
 #search box
-Search_image=PhotoImage(file="C:/Users/ferna/Downloads/python/clima/Images/Rounded Rectangle 3.png")
+Search_image=PhotoImage(file=IMAG_PATH+"Images/Rounded Rectangle 3.png")
 myImage=Label(image=Search_image, bg="#57adff")
 myImage.place(x=270, y=120)
 
-weat_image=PhotoImage(file="C:/Users/ferna/Downloads/python/clima/Images/Layer 7.png")
+weat_image=PhotoImage(file=IMAG_PATH+"Images/Layer 7.png")
 weatherImage=Label(root, image=weat_image, bg="#203243")
 weatherImage.place(x=290, y=127)
 
@@ -107,7 +109,7 @@ textField=tk.Entry(root, justify='center', width=15, font=('poppins', 25, 'bold'
 textField.place(x=370, y=130)
 textField.focus()
 
-Search_icon=PhotoImage(file="C:/Users/ferna/Downloads/python/clima/Images/Layer 6.png")
+Search_icon=PhotoImage(file=IMAG_PATH+"Images/Layer 6.png")
 myImage_icon=Button(image=Search_icon, borderwidth=0, cursor="hand2", bg="#203243", command=getWeather)
 myImage_icon.place(x=645, y=125)
 
@@ -116,7 +118,7 @@ frame=Frame(root, width=1200, height=180, bg="#212120")
 frame.pack(side=BOTTOM)
 
 #bottom boxes
-firstbox=PhotoImage(file="C:/Users/ferna/Downloads/python/clima/Images/Rounded Rectangle 2.png")
+firstbox=PhotoImage(file=IMAG_PATH+"Images/Rounded Rectangle 2.png")
 Label(frame, image=firstbox, bg="#212120").place(x=150, y=20)
 
 
